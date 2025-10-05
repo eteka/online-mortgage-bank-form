@@ -1,0 +1,133 @@
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.page__header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.page__logo {
+  width: 90px;
+  height: auto;
+}
+
+.page__header h1 {
+  margin: 0;
+  color: #0a2f4e;
+}
+
+.page__header p {
+  margin: 0.35rem 0 0;
+  color: #1f2937;
+  max-width: 720px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.card__header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.card__header h2 {
+  margin: 0;
+  color: #0a2f4e;
+}
+
+.card__helper {
+  margin: 0.5rem 0 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.form__row {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.form__status {
+  padding: 1rem 1.25rem;
+  border-radius: 0.85rem;
+  font-weight: 600;
+}
+
+.form__status--success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.form__status--error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.form__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #0f766e, #0ea5e9);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.85rem 2.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.25);
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(14, 165, 233, 0.3);
+}
+
+.submit-button:disabled {
+  cursor: not-allowed;
+  background: #94a3b8;
+  box-shadow: none;
+}
+
+.page__footer {
+  margin-top: 2rem;
+  color: #1f2937;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .card {
+    padding: 1.75rem;
+  }
+
+  .page__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
